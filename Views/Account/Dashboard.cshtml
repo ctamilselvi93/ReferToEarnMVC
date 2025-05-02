@@ -1,0 +1,13 @@
+﻿@model ReferToEarnMVC.Models.User
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Welcome, @Model.Name!</h2>
+
+<p>Your Mobile Number: <strong>@Model.MobileNumber</strong></p>
+
+<p>Your Referral Points: <strong>@Model.Points</strong></p>
+
+<p>Your Referral Code: <code>@Model.ReferralCode</code></p>

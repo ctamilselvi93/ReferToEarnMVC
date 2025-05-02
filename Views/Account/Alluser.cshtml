@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ReferToEarnMVC.Models.User>
+
+@{
+    ViewBag.Title = "All Users and Credit Points";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4">All Users and Credit Points</h2>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Mobile Number</th>
+            <th>Referral Points</th>
+            <th>Referral Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.MobileNumber</td>
+                <td>@user.Points</td>
+                <td>@user.ReferralCode</td>
+            </tr>
+        }
+    </tbody>
+</table>
